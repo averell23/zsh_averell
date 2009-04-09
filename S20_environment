@@ -1,0 +1,17 @@
+#!/bin/zsh
+
+if [ x"$HOME" = x ] ; then
+        export HOME=$(cd ~ ; pwd)
+fi
+
+if [ x"$HOSTNAME" = x ] ; then
+        export HOSTNAME=$(hostname)
+fi
+
+export MANWIDTH=80
+export EDITOR=vim
+export VISUAL=vim
+
+PATH="$PATH:/bin:/usr/bin:/usr/local/bin"
+PATH="$PATH:/sbin:/usr/sbin:/usr/local/sbin"
+export PATH

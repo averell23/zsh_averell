@@ -1,0 +1,32 @@
+#!/bin/zsh
+
+autoload zmv
+
+alias su='sudo -s'
+
+alias du="du -hc"
+alias dus="du -hcs"
+alias df="df -h"
+
+alias ls="ls -G"
+alias la="ls -Ga"
+alias ll="ls -Ghl"
+alias lla="ls -Ghla"
+alias lal="ls -Ghla"
+
+# Talia aliases
+alias talia='./talia.sh shell'
+alias testimp='rake discovery:clear_all && \
+rm -rf delayed_copy*(.N) && \
+rake discovery:hyper_import base_url=/Developer/nietzsche_samples/ \
+doc_path= extension=.xml list_path=index_success.xml \
+prepared_images=/Developer/prepared_images/ delay_file_copies=yes --trace'
+alias testfac='rake discovery:create_color_facsimile_edition name="Facsimile Edition" \
+description="I am a facsimile edition" \
+header=nietzsche_yellow --trace'
+alias jserver='jruby script/server'
+alias jconsole='jruby script/console'
+
+# alias rm='rm -i'
+
+
