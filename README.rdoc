@@ -1,0 +1,28 @@
+= zsh configuation files
+
+Just some configuration files that I use. I stole must of the stuff from here
+http://www.jukie.net/~bart/blog/zsh-git-prompt 
+and I added a fast rake completion using this code:
+http://weblog.rubyonrails.org/2006/3/9/fast-rake-task-completion-for-zsh
+and adding to it to make it more usable.
+
+= Installation
+
+This is supposed to be for Mac OS X. 
+
+All files in the repository go to ~/.zsh.d and the zshrc file should
+go to ~/.zshrc
+
+It should be enough to clone the git repo to .zsh.d and copy or move
+the zshrc file an level up (the script will ignore the "cruft" files
+in the .zsh.d directory)
+
+= Realpath
+
+You need to install the realpath utility in 
+your path (don't know the author, so can't give credit) for the git 
+thing to work. 
+
+To compile it yourself use
+
+  gcc -Wall realpath.c -o realpath -framework CoreServices 
