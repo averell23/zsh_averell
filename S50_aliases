@@ -26,7 +26,7 @@ description="I am a facsimile edition" \
 header=nietzsche_yellow --trace'
 alias jserver='jruby script/server'
 alias jconsole='jruby script/console'
-
+alias nscr='screen -h 5000 -S'
 # alias rm='rm -i'
 
 

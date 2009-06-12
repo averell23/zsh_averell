@@ -22,7 +22,6 @@ function lprompt {
     git_s='$(get_git_prompt_info '%s')'
     if [ -n "$TALIA_SHELL" ]; then talia_s=" [talia] " ; fi
     if [ -n "$SSH_TTY" ]; then ssh_s="*" ; fi
-    if [[ ( "$TERM" = "screen" ) && ( -n "$STY" ) ]]; then screen_s=" (scr:$STY[(ws:.:)-1]) " ; fi
     col_s="%{$fg[red]%}"
 
     PROMPT="\
@@ -30,7 +29,6 @@ $col2$ssh_s \
 $bgc$ch1\
 $bgc$col2%B%1~%b\
 $col1 %n\
-$col1$screen_s\
 $col_s$talia_s\
 $ch2$rst\
 $col2\$$rst "
@@ -62,14 +60,17 @@ function rprompt {
     col2="%{$4$fg[$3]%}"
     ch1=$col1${1[1]}
     ch2=$col1${1[2]}
+    col_git="%{$fg[green]%}"
     git_b='$(get_git_prompt_info '%b' )'
-    col_b="%{$fg[blue]%}"
 
     local _dir='$(_rprompt_dir)'
+    
+    if [[ ( "$TERM" = "screen" ) && ( -n "$STY" ) ]]; then screen_s="screen:$STY[(ws:.:)-1] " ; fi
 
     RPROMPT="\
 $rst$ch1\
-$col_b$git_b\
+$col1$screen_s\
+$col_git$git_b\
 $col2%n@%m\
 $col1:\
 $col2%B$_dir%b\
@@ -81,7 +82,7 @@ if [ $UID -eq 0 ]; then
     rprompt '[]' black black
 elif [ "$TERM" = "screen" ]; then
     lprompt '' green blue
-    rprompt '[]' black black
+    rprompt '[]' blue black
 elif [ -n "$SSH_TTY" ]; then
     lprompt '' cyan blue
     rprompt '[]' black black
