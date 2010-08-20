@@ -20,19 +20,7 @@ alias lal="ls -Ghla"
 
 # Talia aliases
 alias talia='./talia.sh shell'
-alias testimp='rm -rf delayed_copy*(.N) && \
-rake discovery:xml_import base_url=/Developer/nietzsche_samples \ 
-extension=.xml index=index_success.xml \
-prepared_images=/Developer/prepared_images/ delay_file_copies=yes reset_store=true --trace \
-&& sed "s/cp -v/ln -sfv/" < delayed_copy.sh > linking.sh && sh ./linking.sh'
-alias testfac='rake discovery:create_color_facsimile_edition name="Facsimile Edition" \
-description="I am a facsimile edition" \
-header=nietzsche_yellow --trace'
-alias testcrit='touch desc.html && rake discovery:create_critical_edition name="Critical Edition" \
-description=./desc.html header=nietzsche_blue --trace'
-alias jserver='jruby script/server'
-alias jrcon='jruby script/console'
-
+alias nscr='screen -h 5000 -S'
 # alias rm='rm -i'
 
 
