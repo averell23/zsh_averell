@@ -12,6 +12,6 @@ export MANWIDTH=80
 export EDITOR=vim
 export VISUAL=vim
 
-PATH="$PATH:/bin:/usr/bin:/usr/local/bin"
-PATH="$PATH:/sbin:/usr/sbin:/usr/local/sbin"
+# PATH="$PATH:/bin:/usr/bin:/usr/local/bin"
+# PATH="$PATH:/sbin:/usr/sbin:/usr/local/sbin"
 export PATH
