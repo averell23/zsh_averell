@@ -18,8 +18,15 @@ alias ll="ls -Ghl"
 alias lla="ls -Ghla"
 alias lal="ls -Ghla"
 
-# Talia aliases
-alias talia='./talia.sh shell'
+alias bx="bundle exec"
+alias cuke="bundle exec cucumber"
+alias spek="bundle exec rspec"
+alias rakk="bundle exec rake"
+alias con="bundle exec script/console"
+alias cdb="cd /Developer/betterplace"
+
+alias rediss="redis-server /opt/local/etc/redis.conf"
+
 alias nscr='screen -h 5000 -S'
 # alias rm='rm -i'
 

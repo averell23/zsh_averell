@@ -1,3 +1,12 @@
+#!/bin/zsh
+
+get_rvm_prompt_info () {
+  if test -s "$HOME/.rvm/scripts/rvm" && ( test -s "Rakefile" || test -s "Gemfile" || test -s ".rvmrc" ); then
+    res=`rvm current`
+    echo "${res} " 
+  fi
+}
+
 #compdef rvm
 #stolen from https://github.com/nono/dotfiles/blob/master/zsh/Completion/_rvm
 _rvm () {
