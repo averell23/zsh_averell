@@ -1,5 +1,7 @@
 = zsh configuation files
 
+**These files have been superseded, see https://github.com/averell23/dotfiles**
+
 Just some configuration files that I use. I stole must of the stuff from here
 http://www.jukie.net/~bart/blog/zsh-git-prompt 
 and I added a fast rake completion using this code:
